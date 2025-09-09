@@ -1,0 +1,77 @@
+.navbar{
+    background-color: #0c1b33;
+}
+.pk{
+    padding-left: 60px;
+    padding-top: 20px;
+    background-color: #1b2a49;
+}
+.img-fluid1{
+    border-radius: 13px;
+    height: 350px;
+    width: 700px;
+    display: inline;
+    margin-right: 5px;
+}
+.img :hover{
+    border-color: white;
+}
+.img-fluid2{
+    border-radius: 13px;
+    height: 350px;
+    width: 700px;
+    display: inline;
+}
+.img-fluid3{
+    border-radius: 13px;
+    height: 350px;
+    width: 700px;
+    display: inline;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.img-fluid4{
+    height: 350px;
+    width: 700px;
+    display: inline;
+    margin-top: 5px;
+    border-radius: 13px;
+}
+.card1{
+    border: 2px solid;
+    max-width: 25rem;
+    height: 500px;
+    margin-right: 40px;
+    border-radius: 12px;
+}
+.card2{
+    border: 2px solid;
+    max-width: 25rem;
+    height: 500px;
+    margin-right: 40px;
+    border-radius: 12px;
+}
+.card3{
+    border: 2px solid;
+    max-width: 25rem;
+    margin-right: 40px;
+    height: 500px;
+    border-radius: 12px;
+}
+.gamehead{
+    color: white;
+    margin-left:60px;
+}
+.game{
+    background-color: #1b2a49;
+    padding-top: 60px;
+}
+.cards{
+    display: flex;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+.card-text{
+    padding-top: 30px;
+    color: white;
+}
