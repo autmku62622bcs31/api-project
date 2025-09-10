@@ -2,6 +2,9 @@ import React from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
 import Games from './components/Games'
+import Upgames from './components/Upgames'
+import Gbrand from './components/Gbrand'
+
 import "./app.css"
 
 function App() {
@@ -10,6 +13,8 @@ function App() {
       <Header/>
       <Home/>
       <Games/>
+      <Upgames/>
+      <Gbrand/>
     </div>
   )
 }

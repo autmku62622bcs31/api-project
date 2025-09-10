@@ -32,10 +32,13 @@ function Home() {
 
   return (
     <div className='pk'>
+    {/* <div> */}
       <img src={img1} class="img-fluid1" alt="..."/>
       <img src={img2} class="img-fluid2" alt="..."/>
       <img src={img3} class="img-fluid3" alt="..."/>
       <img src={img4} class="img-fluid4" alt="..."/>
+      {/* <hr/> */}
+      {/* </div> */}
     </div>
 )
 }
