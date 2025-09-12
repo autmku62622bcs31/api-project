@@ -13,6 +13,11 @@ function Games1() {
         <span className='free'>Free</span>
         <span className='play'>Multiplayer</span>
       </div>
+      <div className='pubgpub'>
+        <p>Publisher: KRAFTON</p>
+        <p>Publisher: KRAFTON</p>
+        <p>Publisher: KRAFTON</p>
+      </div>
       </div>
     </div>
   )
