@@ -5,7 +5,9 @@ import img3 from '../assets/portal.jpg'
 import img4 from '../assets/tomb-raider.jpg'
 import img5 from '../assets/thewitcher.jpg'
 import img6 from '../assets/tarisland.jpg'
+import { useNavigate } from 'react-router-dom'
 function Games() {
+  const navgate = useNavigate();
   return (
     <div className="album py-5">
       <div className='albums'>
