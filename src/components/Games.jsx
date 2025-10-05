@@ -16,7 +16,7 @@ function Games() {
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div className="col">
           <div className="card1 shadow-sm">
-            <img className="card-img1" src={img1} width="100%" height="300"></img>
+            <a href="/Games1/"><img className="card-img1" src={img1} width="100%" height="300"></img></a>
 
             <div className="card-body">
             <h3 className="card-text">Grand Thief Auto V</h3>

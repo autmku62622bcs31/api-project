@@ -32,7 +32,7 @@ function Home() {
 
   return (
     <div className='pk'>
-    {/* <div> */}
+    {/* <div> */} 
       <img src={img1} class="img-fluid1" alt="..."/>
       <img src={img2} class="img-fluid2" alt="..."/>
       <img src={img3} class="img-fluid3" alt="..."/>

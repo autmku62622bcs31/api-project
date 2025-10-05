@@ -13,14 +13,15 @@ function App() {
   return (
     <div>
       <Header/>
-      {/* <Routes>
-        <Route path='/car' element={<Games1/>}/>
-      </Routes> */}
-      {/* <Games1/> */}
-      <Home/>
+      <Routes>
+        <Route path='/' element={<>
+      <Home/> 
       <Games/>
       <Upgames/>
       <Gbrand/>
+        </>}/>
+        <Route path='/Games1' element={<Games1/>}/>
+      </Routes>
     </div>
   )
 }
