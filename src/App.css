@@ -8,6 +8,17 @@ a{
 .navbar{
     background-color: #0c1b33;
 }
+.log{
+    background-color:#012e76;
+    color: white;
+    margin-left: 40px;
+    border: transparent;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    font-family:'Macondo', cursive;
+    font-weight: bolder;
+}
 .pk{
     padding-left: 80px;
     padding-top: 20px;
@@ -20,28 +31,30 @@ a{
 } */
 .img-fluid1{
     border-radius: 13px;
-    height: 320px;
-    width: 680px;
+    height: 310px;
+    width: 650px;
     display: inline;
     margin-right: 8px;
+    margin-left:32px;
 }
 .img-fluid2{
     border-radius: 13px;
-    height: 320px;
-    width: 680px;
+    height: 310px;
+    width: 650px;
     display: inline;
 }
 .img-fluid3{
     border-radius: 13px;
-    height: 320px;
-    width: 680px;
+    height: 310px;
+    width: 650px;
     display: inline;
     margin-right: 8px;
     margin-top: 8px;
+    margin-left: 32px;
 }
 .img-fluid4{
-    height: 320px;
-    width: 680px;
+    height: 310px;
+    width: 650px;
     display: inline;
     margin-top: 8px;
     border-radius: 13px;

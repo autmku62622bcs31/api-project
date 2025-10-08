@@ -19,6 +19,7 @@ function Header() {
         <form>
           <input className="form-control" type="text" placeholder="Search" aria-label="Search"/>
         </form>
+        <button className='log'>Login</button>
       </div>
     </div>
   </nav>

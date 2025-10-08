@@ -25,7 +25,7 @@ function Games() {
         </div>
         <div className="col">
           <div className="card2 shadow-sm">
-            <img className="card-img2" src={img2} width="100%" height="300"></img>
+            <a href="/Games2/"><img className="card-img2" src={img2} width="100%" height="300"></img></a>
 
             <div className="card-body">
             <h3 className="card-text">Counter Strike</h3>
