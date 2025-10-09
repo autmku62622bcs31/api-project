@@ -1,26 +1,62 @@
-import React from 'react'
-import imggame1 from '../assets/gta5.jpg'
-function Games2() {
+//     <div className="card mb-3">
+//   <div className="row g-0">
+//     <div className="col-md-4">
+//       <img src={img} className="img-fluid rounded-start" alt="..."/>
+//     </div>
+//     <div className="col-md-8">
+//       <div className="card-body">
+//         <h5 className="card-title">Card title</h5>
+//         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+//         <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+function Details() {
+  const [game, setGame] = useState(null);
+
+  useEffect(() => {
+    const fetchGame = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.rawg.io/api/games?search=Counter%20Strike&key=f8673e62b97444d7931ebc58386c0935"
+        );
+
+        // Get first game from response
+        const firstGame = response.data.results[0];
+        setGame(firstGame);
+        console.log(firstGame);
+      } catch (error) {
+        console.error("Error fetching game:", error);
+      }
+    };
+
+    fetchGame();
+  }, []);
+
+  if (!game) return <p>Loading...</p>;
+
   return (
-    <div className='games2'>
-      <div>
-        <img src={imggame1} class="rounded float-start" alt="..."/>
-        <div>
-        <h2 className='pubgtext'>PUBG Battlegrounds</h2>
-        <p className='pubgpara'>Play PUBG: BATTLEGROUNDS for free! Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds</p>
-      </div>
-      <div className='pubgp'>
-        <span className='free'>Free</span>
-        <span className='play'>Multiplayer</span>
-      </div>
+    <div style={{ textAlign: "center", color: "#fff", backgroundColor: "#222", padding: "20px" }}>
+      <h1>{game.name}</h1>
+      <p className='pubgpara'>Play PUBG: BATTLEGROUNDS for free! Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across various, diverse Battlegrounds</p>
+      <img
+        src={game.background_image}
+        alt={game.name}
+        style={{ width: "500px", borderRadius: "10px" }}
+      />
       <div className='pubgpub'>
-        <p>Publisher: KRAFTON</p>
-        <p>Publisher: KRAFTON</p>
-        <p>Publisher: KRAFTON</p>
-      </div>
-      </div>
+      <p><strong>Released:</strong> {game.released}</p>
+      <p><strong>Rating:</strong> {game.rating}</p>
+      <p><strong>Metacritic:</strong> {game.metacritic}</p>
+      <p><strong>Playtime:</strong> {game.playtime}</p>
     </div>
-  )
+    </div>
+  );
 }
 
-export default Games2;
+export default Details;
