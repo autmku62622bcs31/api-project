@@ -7,8 +7,8 @@ import Games from './components/Games'
 import Upgames from './components/Upgames'
 import Gbrand from './components/Gbrand'
 import {Routes,Route} from 'react-router-dom'
-// import GamingBrands from './components/demo'
-
+import GamingBrands from './components/demo'
+import Details from "./components/Details";
 import "./app.css"
 
 function App() {
@@ -21,11 +21,12 @@ function App() {
       <Games/>
       <Upgames/>
       <Gbrand/>
-      {/* <GamingBrands/> */}
+      <GamingBrands/>
         </>}/>
-        <Route path='/Games1' element={<Games1/>}/>
+        <Route path='/Games1' element={<Details/>}/>
         <Route path='/Games2' element={<Games2/>}/>
       </Routes>
+      
     </div>
   )
 }
