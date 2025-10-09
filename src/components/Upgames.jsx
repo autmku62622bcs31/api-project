@@ -7,9 +7,9 @@ function Upgames() {
     <div className='upgames'>
         <h1 className='uphead'>Upcoming Games</h1>
       <div className='upgameimg'>
-      <img src={upimg} class="img-fluid" alt="..."/>
-      <img src={botimg1} class="img-fluid-bot1" alt="..."/>
-      <img src={botimg2} class="img-fluid-bot2" alt="..."/>
+      <img src={upimg} className="img-fluid" alt="..."/>
+      <img src={botimg1} className="img-fluid-bot1" alt="..."/>
+      <img src={botimg2} className="img-fluid-bot2" alt="..."/>
       </div>
     </div>
   )
