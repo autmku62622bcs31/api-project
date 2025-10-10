@@ -4,17 +4,14 @@ import "../App.css";
 
 function Details() {
   const [game, setGame] = useState(null);
-
   useEffect(() => {
     const fetchGame = async () => {
       try {
         const response = await axios.get(
-          "https://api.rawg.io/api/games?search=Counter%20Strike&key=f8673e62b97444d7931ebc58386c0935"
+          "https://api.rawg.io/api/games?search=left-4-dead-2&key=f8673e62b97444d7931ebc58386c0935"
         );
         const firstGame = response.data.results[0];
         setGame(firstGame);
-        const secondGame = response.data.stores[0];
-        setGame(secondGame);
       } catch (error) {
         console.error("Error fetching game:", error);
       }
@@ -38,7 +35,9 @@ function Details() {
       <div className="game-details">
         <h1 className="game-title">{game.name}</h1>
         <p className="game-desc">
-          Play the world's number 1 action game <strong>{game.name}</strong>. Engage in an incredibly realistic brand of terrorist warfare in this wildly popular team-based game. Ally with teammates to complete strategic missions. Take out enemy sites. Rescue hostages. Your role affects your team's success. Your team's success affects your role.
+          Explore the legendary world of <strong>{game.name}</strong>. Experience
+          high-quality graphics, thrilling missions, and immersive gameplay that
+          defines open-world adventures.
         </p>
 
         <div className="game-info">

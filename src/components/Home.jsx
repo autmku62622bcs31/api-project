@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useState,useEffect } from 'react';
 // import axios from 'axios';
-import img1 from '../assets/pubg.jpg'
+import img1 from '../assets/pubgbattle.webp'
 import img2 from '../assets/godofwar2.jpg'
 import img3 from '../assets/overwatch.jpg'
 import img4 from '../assets/redretemption.jpg'
@@ -32,13 +32,10 @@ function Home() {
 
   return (
     <div className='pk'>
-    {/* <div> */} 
       <img src={img1} className="img-fluid1" alt="..."/>
       <img src={img2} className="img-fluid2" alt="..."/>
       <img src={img3} className="img-fluid3" alt="..."/>
       <img src={img4} className="img-fluid4" alt="..."/>
-      {/* <hr/> */}
-      {/* </div> */}
     </div>
 )
 }

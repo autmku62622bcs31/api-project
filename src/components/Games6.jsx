@@ -178,7 +178,7 @@
 //       </div>
 //     </div>
 //   );
-// }
+// }https://api.rawg.io/api/games?search=Counter%20Strike&key=f8673e62b97444d7931ebc58386c0935
 
 // export default Details;
 
@@ -186,14 +186,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 
-function Details() {
+function Games6() {
   const [game, setGame] = useState(null);
 
   useEffect(() => {
     const fetchGame = async () => {
       try {
         const response = await axios.get(
-          "https://api.rawg.io/api/games?search=Grand%20Theft%20Auto%20V&key=f8673e62b97444d7931ebc58386c0935"
+          "https://api.rawg.io/api/games?search=PAYDAY%202&key=f8673e62b97444d7931ebc58386c0935"
         );
         const firstGame = response.data.results[0];
         setGame(firstGame);
@@ -236,4 +236,4 @@ function Details() {
   );
 }
 
-export default Details;
+export default Games6;
