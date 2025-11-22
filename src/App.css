@@ -36,6 +36,7 @@ a{
     display: inline;
     margin-right: 8px;
     margin-left:32px;
+    transition: transform 0.3s ease;
 }
 .img-fluid2{
     border-radius: 13px;
@@ -59,38 +60,72 @@ a{
     margin-top: 8px;
     border-radius: 13px;
 } */
+
+
+
 .pk {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-rows: repeat(2, 300px);
+  gap: 15px;
+  width: 90%;
+  perspective: 1000px;
+  margin: auto;
 }
 
-/* All images share the same style */
-.pk img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
+/* wrapper for each image */
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
   transition: all 0.4s ease;
 }
 
-/* Hover effect for each image */
-.pk:hover img {
-  opacity: 0.9;
+/* image style */
+.pk img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: all 0.6s ease;
 }
 
-/* When hovering an image */
-.pk img:hover {
-  height: 300px; /* increase height for hovered image */
-  transform: scale(1.02);
+/* overlay layer */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.4s ease;
 }
 
-/* While one image is hovered, make others smaller */
-.pk img:hover ~ img,
-.pk img:not(:hover) {
-  height: 200px; /* decrease height for non-hovered images */
-  opacity: 0.7;
+/* hover effect on image */
+.img-box:hover img {
+  transform: scale(1.15);
+  filter: brightness(0.8);
 }
+
+/* overlay on hover */
+.img-box:hover .overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* slightly shrink other images when hovering one */
+/* .pk:hover .img-box:not(:hover) {
+  transform: scale(0.96);
+  opacity: 0.95;
+} */
+
+/* responsive for small screens */
+@media (max-width: 600px) {
+  .pk {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+  }
+}
+
 
 
 /*Games.jsx*/
@@ -326,6 +361,24 @@ a{
 .gb{
     background-color: #1b2a49;
 }
+.cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  transition: opacity 0.3s ease;
+}
+
+.cards::-webkit-scrollbar {
+  display: none; /* hide scrollbar for clean look */
+}
+.cards::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+.gbrandarr:hover {
+  transform: scale(1.1);
+}
+
 .cards{
     display: flex;
     margin-left: 110px;
@@ -748,4 +801,28 @@ body {
   color: #aaa;
   margin-top: 100px;
   font-size: 1.3rem;
+}
+thead{
+  background-color: #0c1b33;
+}
+table{
+  background-color: #1b2a49;
+}
+.edit{
+  height: 25px;
+}
+.delete{
+  height: 25px;
+  padding-left: 20px;
+}
+select{
+  width: 350px;
+  padding: 5px;
+  margin: transparent;
+  border-radius: 5px;
+}
+
+span{
+  font-size: 12px;
+  color: red;
 }

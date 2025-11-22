@@ -31,12 +31,28 @@ function Home() {
 // )
 
   return (
-    <div className='pk'>
-      <img src={img1} className="img-fluid1" alt="..."/>
-      <img src={img2} className="img-fluid2" alt="..."/>
-      <img src={img3} className="img-fluid3" alt="..."/>
-      <img src={img4} className="img-fluid4" alt="..."/>
-    </div>
+<div className="pk">
+  <a href="/pubg" className="img-box"><div>
+  <img src={img1} className="img-fluid1" alt="..." ></img>
+    <div className="overlay">PUBG</div>
+  </div></a>
+
+  <a href="/godofwar" className="img-box"><div>
+    <img src={img2} className="img-fluid2" alt="..." />
+    <div className="overlay">God of War</div>
+  </div></a>
+
+  <a href="/overwatch" className="img-box"><div>
+    <img src={img3} className="img-fluid3" alt="..." />
+    <div className="overlay"></div>
+  </div></a>
+
+  <a href="/red" className="img-box"><div>
+    <img src={img4} className="img-fluid4" alt="..." />
+    <div className="overlay"></div>
+  </div></a>
+</div>
+
 )
 }
 
