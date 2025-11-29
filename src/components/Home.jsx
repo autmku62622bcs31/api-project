@@ -32,26 +32,28 @@ function Home() {
 
   return (
 <div className="pk">
-  <a href="/pubg" className="img-box"><div>
-  <img src={img1} className="img-fluid1" alt="..." ></img>
+  <a href="/pubg" className="img-box">
+    <img src={img1} className="img-fluid1" alt="PUBG" />
     <div className="overlay">PUBG</div>
-  </div></a>
+  </a>
 
-  <a href="/godofwar" className="img-box"><div>
-    <img src={img2} className="img-fluid2" alt="..." />
+  <a href="/godofwar" className="img-box">
+    <img src={img2} className="img-fluid2" alt="God of War" />
     <div className="overlay">God of War</div>
-  </div></a>
+  </a>
 
-  <a href="/overwatch" className="img-box"><div>
-    <img src={img3} className="img-fluid3" alt="..." />
-    <div className="overlay"></div>
-  </div></a>
+  <a href="/overwatch" className="img-box">
+    <img src={img3} className="img-fluid3" alt="Overwatch" />
+    <div className="overlay">Overwatch 2</div>
+  </a>
 
-  <a href="/red" className="img-box"><div>
-    <img src={img4} className="img-fluid4" alt="..." />
-    <div className="overlay"></div>
-  </div></a>
+  <a href="/red" className="img-box">
+    <img src={img4} className="img-fluid4" alt="Red Dead" />
+    <div className="overlay">Red Dead Redemption</div>
+  </a>
+
 </div>
+
 
 )
 }

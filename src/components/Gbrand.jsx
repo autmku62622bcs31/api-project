@@ -268,6 +268,11 @@ import React, { useRef } from "react";
 import imggbrand1 from "../assets/Rockstargame.jpeg";
 import imggbrand2 from "../assets/Activision.jpeg";
 import imggbrand3 from "../assets/unity.png";
+import imggbrand4 from "../assets/konami.png";
+import imggbrand5 from "../assets/ealogo.png";
+import imggbrand6 from "../assets/EpicGames.svg.png";
+import imggbrand7 from "../assets/UBI.png";
+import imggbrand8 from "../assets/2K-Logo.png";
 import imggtext from "../assets/arrow2.0.png";
 
 function Gbrand() {
@@ -287,11 +292,11 @@ function Gbrand() {
     { img: imggbrand1, name: "Rockstar Games" },
     { img: imggbrand2, name: "Activision" },
     { img: imggbrand3, name: "Unity Technologies" },
-    { img: imggbrand1, name: "2K Sports" },
-    { img: imggbrand2, name: "Electronic Arts" },
-    { img: imggbrand3, name: "Epic Games" },
-    { img: imggbrand1, name: "Ubisoft" },
-    { img: imggbrand2, name: "SEGA" },
+    { img: imggbrand4, name: "Konami" },
+    { img: imggbrand5, name: "Electronic Arts" },
+    { img: imggbrand6, name: "Epic Games" },
+    { img: imggbrand7, name: "Ubisoft" },
+    { img: imggbrand8, name: "2K Games" },
   ];
 
   return (

@@ -1,129 +1,74 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Header from "./Header";
+// import React, { useState, useEffect } from "react";
+// import Header from "./Header";
 
-const API_KEY = "f8673e62b97444d7931ebc58386c0935";
+// function App() {
+//   const [search, setSearch] = useState("");
+//   const [games, setGames] = useState([]);
+//   const [genreFilter, setGenreFilter] = useState("");
 
-function GameSearch() {
-  const [search, setSearch] = useState("PAYDAY 2");
-  const [games, setGames] = useState([]);
+//   const API_KEY = "f8673e62b97444d7931ebc58386c0935";
 
-  // Filters
-  const [genre, setGenre] = useState("");
-  const [platform, setPlatform] = useState("");
-  const [rating, setRating] = useState("");
-  const [year, setYear] = useState("");
+//   // Fetch games from RAWG API
+//   const fetchGames = async () => {
+//     const url = `https://api.rawg.io/api/games?search=${search}&key=${API_KEY}`;
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     setGames(data.results);
+//   };
 
-  const fetchGames = async () => {
-    try {
-      const res = await axios.get(
-        `https://api.rawg.io/api/games?key=${API_KEY}&search=${search}`
-      );
+//   // Fetch on button click
+//   const handleSearchSubmit = () => {
+//     fetchGames();
+//   };
 
-      let data = res.data.results;
+//   // Filter by genre
+//   const filteredGames = games.filter((game) =>
+//     genreFilter ? game.genres.some((g) => g.name === genreFilter) : true
+//   );
 
-      if (genre) {
-        data = data.filter((g) =>
-          g.genres.some((x) => x.name.toLowerCase() === genre.toLowerCase())
-        );
-      }
+//   return (
+//     <div>
+//       <Header search={search} setSearch={setSearch} onSearchSubmit={handleSearchSubmit} />
 
-      if (platform) {
-        data = data.filter((g) =>
-          g.platforms?.some(
-            (p) =>
-              p.platform.name.toLowerCase() === platform.toLowerCase()
-          )
-        );
-      }
+//       {/* genre dropdown */}
+//       <div className="container mt-4">
+//         <select
+//           className="form-select w-25"
+//           value={genreFilter}
+//           onChange={(e) => setGenreFilter(e.target.value)}
+//         >
+//           <option value="">All Genres</option>
+//           <option value="Action">Action</option>
+//           <option value="RPG">RPG</option>
+//           <option value="Adventure">Adventure</option>
+//           <option value="Shooter">Shooter</option>
+//         </select>
+//       </div>
 
-      if (rating) {
-        data = data.filter((g) => g.rating >= Number(rating));
-      }
+//       {/* Game Cards */}
+//       <div className="container mt-4">
+//         <div className="row">
+//           {filteredGames.map((game) => (
+//             <div className="col-md-3 mb-4" key={game.id}>
+//               <div className="card">
+//                 <img src={game.background_image} className="card-img-top" alt={game.name} />
+//                 <div className="card-body">
+//                   <h5 className="card-title">{game.name}</h5>
+//                   <p className="card-text">
+//                     ⭐ Rating: {game.rating}
+//                   </p>
+//                   <p className="text-muted">
+//                     Genres: {game.genres.map(g => g.name).join(", ")}
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
 
-      if (year) {
-        data = data.filter((g) => g.released?.startsWith(year));
-      }
+//     </div>
+//   );
+// }
 
-      setGames(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchGames();
-  }, [search, genre, platform, rating, year]);
-
-  return (
-    <div>
-      {/* HEADER WITH SEARCH */}
-      <Header search={search} setSearch={setSearch} />
-
-      <div className="container mt-4">
-
-        {/* Filters */}
-        <div className="d-flex gap-3 mb-4">
-          <select className="form-select" value={genre} onChange={(e) => setGenre(e.target.value)}>
-            <option value="">Genre</option>
-            <option value="action">Action</option>
-            <option value="shooter">Shooter</option>
-            <option value="rpg">RPG</option>
-            <option value="strategy">Strategy</option>
-          </select>
-
-          <select className="form-select" value={platform} onChange={(e) => setPlatform(e.target.value)}>
-            <option value="">Platform</option>
-            <option value="pc">PC</option>
-            <option value="playstation">PlayStation</option>
-            <option value="xbox">Xbox</option>
-            <option value="nintendo switch">Nintendo Switch</option>
-          </select>
-
-          <select className="form-select" value={rating} onChange={(e) => setRating(e.target.value)}>
-            <option value="">Rating</option>
-            <option value="4">4★ & Up</option>
-            <option value="3">3★ & Up</option>
-            <option value="2">2★ & Up</option>
-          </select>
-
-          <input
-            type="number"
-            className="form-control"
-            placeholder="Year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            style={{ maxWidth: "120px" }}
-          />
-        </div>
-
-        {/* Game Cards */}
-        <div>
-          {games.length === 0 ? (
-            <p>No games found.</p>
-          ) : (
-            games.map((g) => (
-              <div key={g.id} className="card mb-3 p-3 d-flex flex-row">
-                <img
-                  src={g.background_image}
-                  alt={g.name}
-                  style={{ width: "140px", borderRadius: "10px" }}
-                />
-                
-                <div className="ms-3">
-                  <h4>{g.name}</h4>
-                  <p>⭐ Rating: {g.rating}</p>
-                  <p>📅 Released: {g.released}</p>
-                  <p>🎮 {g.genres?.map((x) => x.name).join(", ")}</p>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-
-      </div>
-    </div>
-  );
-}
-
-export default GameSearch;
+// export default App;

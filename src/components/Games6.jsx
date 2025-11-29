@@ -7,7 +7,7 @@
 //       <div className="card-body">
 //         <h5 className="card-title">Card title</h5>
 //         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-//         <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+//         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
 //       </div>
 //     </div>
 //   </div>
@@ -185,6 +185,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function Games6() {
   const [game, setGame] = useState(null);
@@ -208,6 +210,8 @@ function Games6() {
   if (!game) return <p className="loading">Loading...</p>;
 
   return (
+    <div>
+      <Header/>
     <div className="game-card">
       <div className="game-image-container">
         <img
@@ -232,6 +236,8 @@ function Games6() {
           <p><strong>Playtime:</strong> {game.playtime} hrs</p>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }

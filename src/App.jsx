@@ -25,16 +25,19 @@ import TheMealsdb from "./components/TheMealsDb";
 import Signin from "./components/Signup";
 import Login from "./components/Login";
 import Userdashboard from "./components/Userdashboard";
+import Profile from "./components/Profile";
 
 function App() {
   return (
     <div>
      
-      <Routes>
+      
         {/* <Route path='/' element={<>
       
       <GamingBrands/>
-        </>}/> */}
+      </>}/> */}
+        <Routes>
+        <Route path='/profile' element={<Profile/>}/>
         <Route path='/Games1' element={<Games1/>}/>
         <Route path='/Games2' element={<Games2/>}/>
         <Route path='/Games3' element={<Games3/>}/>
@@ -48,13 +51,13 @@ function App() {
         <Route path='/Gta6' element={<Gta6/>}/>
         <Route path='/lostsoulaside' element={<LostSoulAside/>}/>
         <Route path='/callofduty' element={<Callofduty/>}/>
-
+</Routes>
         
         
       
       {/* <SlideButton/> */}
-
-  <Route path="/" element={<Signin/>} />
+<Routes>
+        <Route path="/" element={<Signin/>} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/view" element={<TheMealsdb/>} />
         <Route path="/user" element={<Userdashboard/>}/>

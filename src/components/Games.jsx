@@ -9,72 +9,97 @@ import { useNavigate } from 'react-router-dom'
 function Games() {
   const navgate = useNavigate();
   return (
-    <div className="album py-5">
-      <div className='albums'>
+    <div className="album py-5 bg">
     <div className="container">
-      <h1 className='gamehead'>Games</h1>
+      <h1 className=''>Games</h1>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div className="col">
-          <div className="card1 shadow-sm">
-            <a href="/Games1/"><img className="card-img1" src={img1} width="100%" height="300"></img></a>
+          <div className="card shadow-sm">
+           <a href="/Games1/"><img className="bd-placeholder-img card-img-top" src={img1} width="100%" height="225"></img></a>
 
             <div className="card-body">
-            <h3 className="card-text">Grand Thief Auto V</h3>
-            <button className='card-small1'>Free</button>
+              <h3 className="card-text">Grand Thief Auto V</h3>
+              <div className="d-flex justify-content-end align-items-center">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary">Free</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div className="col">
-          <div className="card2 shadow-sm">
-            <a href="/Games2/"><img className="card-img2" src={img2} width="100%" height="300"></img></a>
-            <div className="card-body">
-            <h3 className="card-text">Counter Strike</h3>
-            <button className='card-small1'>Free</button>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="card3 shadow-sm">
-            <a href="/Games3/"><img className="card-img3" src={img3} width="100%" height="300"></img></a>
-            <div className="card-body">
-            <h3 className="card-text">Left 4 Dead 2</h3>
-            <button className='card-small1'>Free</button>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="card4 shadow-sm">
-            <a href="/Games4/"><img className="card-img4" src={img4} width="100%" height="300"></img></a>
+          <div className="card shadow-sm">
+           <a href="/Games2/"><img className="bd-placeholder-img card-img-top" src={img2} width="100%" height="225"></img></a>
 
             <div className="card-body">
-              <h3 className="card-text">Bioshock Infinite: Clash in the Clouds</h3>
-              <button className='card-small'>Free</button>
+              <h3 className="card-text">Counter Strike</h3>
+              <div className="d-flex justify-content-end align-items-center">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary">Free</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div className="col">
-          <div className="card5 shadow-sm">
-            <a href="/Games5/"><img className="card-img5" src={img5} width="100%" height="300"></img></a>
+          <div className="card shadow-sm">
+           <a href="/Games3/"><img className="bd-placeholder-img card-img-top" src={img3} width="100%" height="225"></img></a>
+
+            <div className="card-body">
+              <h3 className="card-text">Left 4 Dead 2</h3>
+              <div className="d-flex justify-content-end align-items-center">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary">Free</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="card shadow-sm">
+           <a href="/Games4/"><img className="bd-placeholder-img card-img-top" src={img4} width="100%" height="225"></img></a>
+
+            <div className="card-body">
+              <h3 className="card-text">Bioshock Infinite: Clash </h3>
+              <div className="d-flex justify-content-end align-items-center">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary">Free</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="card shadow-sm">
+           <a href="/Games5/"><img className="bd-placeholder-img card-img-top" src={img5} width="100%" height="225"></img></a>
 
             <div className="card-body">
               <h3 className="card-text">The Witcher 3: Wild Hunt</h3>
-              <button className='card-small1'>Free</button>
+              <div className="d-flex justify-content-end align-items-center">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary">Free</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div className="col">
-          <div className="card6 shadow-sm">
-            <a href="/Games6/"><img className="card-img6" src={img6} width="100%" height="300"></img></a>
+          <div className="card shadow-sm">
+           <a href="/Games6/"><img className="bd-placeholder-img card-img-top" src={img6} width="100%" height="225"></img></a>
 
             <div className="card-body">
               <h3 className="card-text">PAYDAY 2</h3>
-              <button className='card-small1'>Free</button>
+              <div className="d-flex justify-content-end">
+                <div className="btn-group">
+                  <button type="button" className="btn btn-sm btn-outline-secondary">Free</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 //     <div className='game'>
 //     <h1 className='gamehead'>GAMES</h1>

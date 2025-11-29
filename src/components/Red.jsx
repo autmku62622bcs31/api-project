@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function Redretemption() {
   const [game, setGame] = useState(null);
@@ -24,6 +26,8 @@ function Redretemption() {
   if (!game) return <p className="loading">Loading...</p>;
 
   return (
+    <div>
+      <Header/>
     <div className="game-card">
       <div className="game-image-container">
         <img
@@ -48,6 +52,8 @@ function Redretemption() {
           <p><strong>Playtime:</strong> {game.playtime} hrs</p>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }

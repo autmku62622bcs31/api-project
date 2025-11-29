@@ -53,7 +53,7 @@ function Signin() {
     // If errors exist → stop and show message
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-      setMessage("Please fix the errors above");
+      setMessage("Please fill the details below");
       return;
     }
 
@@ -81,7 +81,7 @@ function Signin() {
 
   return (
     <div
-      className="d-flex justify-content-center align-items-center"
+className="d-flex justify-content-center align-items-center"
       style={{ minHeight: "95vh", minWidth: "100vw" }}
     >
       <form
